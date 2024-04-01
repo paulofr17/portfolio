@@ -70,9 +70,9 @@ export function Header() {
   // }, []);
 
   return (
-    <header className="sticky top-0 z-10 flex h-24 w-full items-center justify-between bg-white px-20 shadow-sm">
+    <header className="sticky top-0 z-10 flex h-24 w-full max-w-[1920px] items-center justify-between bg-white px-4 shadow-sm sm:px-20">
       <h1 className="text-lg font-bold">Paulo Ribeiro</h1>
-      <ul className="flex gap-4 font-semibold">
+      <ul className="flex gap-4 text-sm font-semibold sm:text-base">
         <li
           className={`cursor-pointer hover:text-red-500 ${activeSection === "about" && "text-red-500"}`}
           onClick={scrollToSection("about")}

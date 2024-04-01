@@ -13,8 +13,8 @@ export function Projects() {
         <div className="flex-1">
           <img src={task_manager} className="w-full rounded-lg" />
         </div>
-        <div className="mx-auto flex w-96 flex-col gap-4 md:justify-evenly">
-          <h3 className="text-center text-xl font-semibold">Task Manager</h3>
+        <div className="mx-auto flex w-full max-w-96 flex-col gap-4 text-pretty text-center md:justify-evenly">
+          <h3 className="text-xl font-semibold">Task Manager</h3>
           <p className="pb-1 font-rubik text-sm text-gray-700">
             Task Manager is an app designed to help users organize, prioritize, and accomplish their
             tasks efficiently. With its intuitive interface and comprehensive suite of features, it

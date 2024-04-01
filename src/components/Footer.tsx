@@ -3,11 +3,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export function Footer() {
   return (
     <footer className="bg-zinc-800 text-white">
-      <div className="mx-auto max-w-[800px] py-6">
+      <div className="mx-auto max-w-[800px] py-4 sm:py-6">
         <div className="flex flex-row justify-evenly">
           <div className="flex flex-col justify-between">
             <div>
-              <h3 className="text-lg font-semibold">Contact Me</h3>
+              <h3 className="text-base font-semibold sm:text-lg">Contact Me</h3>
               <nav className="mt-2 flex gap-3">
                 <a
                   href="https://github.com/paulofr17/"
@@ -30,8 +30,8 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="mb-2 text-lg font-semibold">Quick Links</h3>
-            <ul className="space-y-1 font-rubik">
+            <h3 className="mb-2 text-base font-semibold sm:text-lg">Quick Links</h3>
+            <ul className="space-y-1 font-rubik text-sm sm:text-base">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white">
                   About
