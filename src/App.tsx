@@ -1,23 +1,28 @@
 //import './App.css'
 import { Header } from "@components/Header";
+import { About } from "@components/About";
+import { Experience } from "@components/Experience";
+import { Projects } from "@components/Projects";
+import { Contact } from "@components/Contact";
+import { Footer } from "@components/Footer";
 
 function App() {
   return (
     <div className="w-full max-w-[1920px]">
       <Header />
-      <section id="home" className="h-[500px] py-24">
-        home
+      <section id="about" className="bg-zinc-50 px-4 py-12">
+        <About />
       </section>
-      <section id="about" className="h-[500px] bg-stone-50 py-24">
-        about
+      <section id="experience" className="px-4 py-12">
+        <Experience />
       </section>
-      <section id="projects" className="h-[500px] py-24">
-        projects
+      <section id="projects" className="bg-zinc-50 px-4 py-12">
+        <Projects />
       </section>
-      <section id="contact" className="h-[500px] bg-stone-50 py-24">
-        contacts
+      <section id="contact" className="px-4 py-12">
+        <Contact />
       </section>
-      <footer className="h-[100px] bg-stone-100 py-24"></footer>
+      <Footer />
     </div>
   );
 }

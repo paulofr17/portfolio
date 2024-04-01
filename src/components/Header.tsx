@@ -1,12 +1,22 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export function Header() {
   const [activeSection, setActiveSection] = useState(null);
   const sections = useRef<HTMLElement[]>([]);
 
+  const scrollToSection = useCallback(
+    (sectionName: string) => () => {
+      const section = sections.current.find((section) => section.id === sectionName);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    },
+    [],
+  );
+
   useEffect(() => {
     sections.current = Array.from(
-      document.querySelectorAll("#home, #about, #projects, #contact"),
+      document.querySelectorAll("#about, #experience, #projects, #contact"),
     ) as HTMLElement[];
 
     const handleScroll = () => {
@@ -60,34 +70,34 @@ export function Header() {
   // }, []);
 
   return (
-    <nav className="sticky top-0 z-10 flex h-24 w-full items-center justify-between bg-white px-20 shadow-lg">
-      <p className="font-bold">Paulo Ribeiro</p>
-      <div className="flex gap-4 font-semibold">
-        <a
-          href="#home"
-          className={`hover:text-red-500 ${activeSection === "home" && "text-red-500"}`}
-        >
-          Home
-        </a>
-        <a
-          href="#about"
-          className={`hover:text-red-500 ${activeSection === "about" && "text-red-500"}`}
+    <header className="sticky top-0 z-10 flex h-24 w-full items-center justify-between bg-white px-20 shadow-sm">
+      <h1 className="text-lg font-bold">Paulo Ribeiro</h1>
+      <ul className="flex gap-4 font-semibold">
+        <li
+          className={`cursor-pointer hover:text-red-500 ${activeSection === "about" && "text-red-500"}`}
+          onClick={scrollToSection("about")}
         >
           About
-        </a>
-        <a
-          href="#projects"
-          className={`hover:text-red-500 ${activeSection === "projects" && "text-red-500"}`}
+        </li>
+        <li
+          className={`cursor-pointer hover:text-red-500 ${activeSection === "experience" && "text-red-500"}`}
+          onClick={scrollToSection("experience")}
+        >
+          Experience
+        </li>
+        <li
+          className={`cursor-pointer hover:text-red-500 ${activeSection === "projects" && "text-red-500"}`}
+          onClick={scrollToSection("projects")}
         >
           Projects
-        </a>
-        <a
-          href="#contact"
-          className={`hover:text-red-500 ${activeSection === "contact" && "text-red-500"}`}
+        </li>
+        <li
+          className={`cursor-pointer hover:text-red-500 ${activeSection === "contact" && "text-red-500"}`}
+          onClick={scrollToSection("contact")}
         >
           Contact
-        </a>
-      </div>
-    </nav>
+        </li>
+      </ul>
+    </header>
   );
 }
