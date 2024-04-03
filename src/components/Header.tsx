@@ -1,14 +1,19 @@
+import { Menu, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 export function Header() {
   const [activeSection, setActiveSection] = useState(null);
   const sections = useRef<HTMLElement[]>([]);
+  const [sideBarOpen, setSideBarOpen] = useState(false);
 
   const scrollToSection = useCallback(
-    (sectionName: string) => () => {
+    (sectionName: string, fromSideBar?: boolean) => () => {
       const section = sections.current.find((section) => section.id === sectionName);
       if (section) {
         section.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+      if (fromSideBar) {
+        setSideBarOpen(false);
       }
     },
     [],
@@ -41,38 +46,10 @@ export function Header() {
     };
   }, []);
 
-  // const handleScroll = () => {
-  //   const pageYOffset = window.scrollY + 105;
-  //   let newActiveSection = null;
-  //   console.log(pageYOffset);
-  //   sections.current.forEach((section) => {
-  //     const sectionOffsetTop = section.offsetTop;
-  //     const sectionHeight = section.offsetHeight;
-  //     if (
-  //       pageYOffset >= sectionOffsetTop &&
-  //       pageYOffset < sectionOffsetTop + sectionHeight
-  //     ) {
-  //       newActiveSection = section.id;
-  //     }
-  //   });
-  //   setActiveSection(newActiveSection);
-  // };
-
-  // useEffect(() => {
-  //   sections.current = Array.from(
-  //     document.querySelectorAll("#home, #about, #projects, #contact"),
-  //   ) as HTMLElement[];
-  //   window.addEventListener("scroll", handleScroll);
-  //   handleScroll();
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   return (
     <header className="sticky top-0 z-10 flex h-24 w-full max-w-[1920px] items-center justify-between bg-white px-4 shadow-sm sm:px-20">
       <h1 className="text-lg font-bold">Paulo Ribeiro</h1>
-      <ul className="flex gap-4 text-sm font-semibold sm:text-base">
+      <ul className="hidden gap-4 text-sm font-semibold sm:flex sm:text-base">
         <li
           className={`cursor-pointer hover:text-red-500 ${activeSection === "about" && "text-red-500"}`}
           onClick={scrollToSection("about")}
@@ -98,6 +75,48 @@ export function Header() {
           Contact
         </li>
       </ul>
+      <button onClick={() => setSideBarOpen((prev) => !prev)} className="block sm:hidden">
+        <Menu className="h-6 w-6" />
+      </button>
+      {sideBarOpen && (
+        <div className="fixed inset-0 z-10 bg-black/50" onClick={() => setSideBarOpen(false)}></div>
+      )}
+      <div
+        className={`fixed inset-y-0 left-0 z-20 w-64 transform bg-white transition-transform duration-300 ${sideBarOpen ? "translate-x-0" : "-translate-x-full"}`}
+      >
+        <div className="flex items-center justify-between px-4 py-3">
+          <h1 className="text-lg font-bold">Menu</h1>
+          <button onClick={() => setSideBarOpen(false)} className="hover:opacity-50">
+            <X className="h-6 w-6" />
+          </button>
+        </div>
+        <ul className="space-y-4 px-4 pt-4 font-rubik">
+          <li
+            className={`cursor-pointer hover:text-red-500 ${activeSection === "about" && "text-red-500"}`}
+            onClick={scrollToSection("about", true)}
+          >
+            About
+          </li>
+          <li
+            className={`cursor-pointer hover:text-red-500 ${activeSection === "experience" && "text-red-500"}`}
+            onClick={scrollToSection("experience", true)}
+          >
+            Experience
+          </li>
+          <li
+            className={`cursor-pointer hover:text-red-500 ${activeSection === "projects" && "text-red-500"}`}
+            onClick={scrollToSection("projects", true)}
+          >
+            Projects
+          </li>
+          <li
+            className={`cursor-pointer hover:text-red-500 ${activeSection === "contact" && "text-red-500"}`}
+            onClick={scrollToSection("contact", true)}
+          >
+            Contact
+          </li>
+        </ul>
+      </div>
     </header>
   );
 }
