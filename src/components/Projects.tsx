@@ -1,4 +1,4 @@
-import { Project } from "./Project";
+import { Project } from "@components/Project";
 import { projectsPortfolio } from "@models/types";
 
 export function Projects() {

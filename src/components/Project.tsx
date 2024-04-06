@@ -1,4 +1,4 @@
-import { Project } from "models/types";
+import type { Project } from "models/types";
 import { AiFillGithub } from "react-icons/ai";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
