@@ -16,7 +16,7 @@ export function About() {
             to contribute with my skills and expertise toward impactful projects that push the
             boundaries of innovation.
           </p>
-          <button className="mt-1 w-fit rounded-xl bg-red-500 p-3 text-left font-rubik text-sm font-medium text-white transition hover:bg-red-500/70">
+          <button className="mt-1 w-fit rounded-lg bg-red-500 p-3 text-left font-rubik text-sm font-medium text-white transition hover:bg-red-500/70">
             Download CV
           </button>
         </div>
