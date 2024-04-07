@@ -18,16 +18,6 @@ export function Contact() {
           <p className="font-rubik text-sm text-gray-700 sm:text-base">paulofr17@gmail.com</p>
         </a>
         <a
-          href="https://github.com/paulofr17/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center rounded-lg bg-white p-6 text-center drop-shadow-md"
-        >
-          <FaGithub size={52} className="mb-4 text-black" />
-          <p className="mb-2 font-semibold">GitHub</p>
-          <p className="font-rubik text-sm text-gray-700 sm:text-base">github.com/paulofr17</p>
-        </a>
-        <a
           href="https://linkedin.com/in/paulo-ribeiro17/"
           target="_blank"
           rel="noopener noreferrer"
@@ -38,6 +28,16 @@ export function Contact() {
           <p className="font-rubik text-sm text-gray-700 sm:text-base">
             linkedin.com/in/paulo-ribeiro17
           </p>
+        </a>
+        <a
+          href="https://github.com/paulofr17/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-col items-center rounded-lg bg-white p-6 text-center drop-shadow-md"
+        >
+          <FaGithub size={52} className="mb-4 text-black" />
+          <p className="mb-2 font-semibold">GitHub</p>
+          <p className="font-rubik text-sm text-gray-700 sm:text-base">github.com/paulofr17</p>
         </a>
       </div>
     </div>

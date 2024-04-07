@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 
 export function Footer() {
   return (
@@ -9,12 +10,8 @@ export function Footer() {
             <div>
               <h3 className="text-base font-semibold sm:text-lg">Contact Me</h3>
               <nav className="mt-2 flex gap-3">
-                <a
-                  href="https://github.com/paulofr17/"
-                  target="_blank"
-                  className="text-white hover:text-gray-300"
-                >
-                  <FaGithub size={22} />
+                <a href="mailto:paulofr17@gmail.com" className="text-white hover:text-gray-300">
+                  <MdOutlineEmail size={24} />
                 </a>
                 <a
                   href="https://linkedin.com/in/paulo-ribeiro17/"
@@ -22,6 +19,13 @@ export function Footer() {
                   className="text-white hover:text-gray-300"
                 >
                   <FaLinkedin size={22} />
+                </a>
+                <a
+                  href="https://github.com/paulofr17/"
+                  target="_blank"
+                  className="text-white hover:text-gray-300"
+                >
+                  <FaGithub size={22} />
                 </a>
               </nav>
             </div>
