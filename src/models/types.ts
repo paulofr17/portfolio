@@ -22,4 +22,37 @@ export const projectsPortfolio: Project[] = [
     github: "https://github.com/paulofr17/task-manager/",
     liveView: "https://task-manager-paulofr17.vercel.app/"
   },
+  {
+    name: "Sneakers Store",
+    description:
+      `Nisi est ullamco irure laboris consectetur laborum do nisi aute id sunt laboris.
+      Officia esse ad non velit non minim ad pariatur ullamco dolor cupidatat et incididunt. Dolor et adipisicing est voluptate excepteur dolor ut. 
+      Consequat officia ipsum aliquip do exercitation culpa ea nulla aute anim. Aliquip ipsum qui sunt proident id elit proident.`,
+    technologies: ["Next", "React", "Tailwind", "Prisma", "NodeJS", "PostgreSQL"],
+    image: Task_Manager,
+    github: "https://github.com/paulofr17/task-manager/",
+    liveView: "https://sneakers--store.vercel.app/"
+  },
+  {
+    name: "Sneakers Store",
+    description:
+      `Nisi est ullamco irure laboris consectetur laborum do nisi aute id sunt laboris.
+      Officia esse ad non velit non minim ad pariatur ullamco dolor cupidatat et incididunt. Dolor et adipisicing est voluptate excepteur dolor ut. 
+      Consequat officia ipsum aliquip do exercitation culpa ea nulla aute anim. Aliquip ipsum qui sunt proident id elit proident.`,
+    technologies: ["Angular", "Tailwind", "Prisma", "NodeJS", "PostgreSQL"],
+    image: Task_Manager,
+    github: "https://github.com/paulofr17/task-manager/",
+    liveView: "https://sneakersstore.vercel.app/"
+  },
+  {
+    name: "Spickles",
+    description:
+      `Nisi est ullamco irure laboris consectetur laborum do nisi aute id sunt laboris.
+      Officia esse ad non velit non minim ad pariatur ullamco dolor cupidatat et incididunt. Dolor et adipisicing est voluptate excepteur dolor ut. 
+      Consequat officia ipsum aliquip do exercitation culpa ea nulla aute anim. Aliquip ipsum qui sunt proident id elit proident.`,
+    technologies: ["React", "AntDesign"],
+    image: Task_Manager,
+    github: "",
+    liveView: "https://task-manager-paulofr17.vercel.app/"
+  },
 ];

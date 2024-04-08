@@ -9,7 +9,7 @@ export function Projects() {
         <h2 className="text-center font-rubik text-lg font-semibold text-red-500">
           Portfolio of personal projects
         </h2>
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-6 md:gap-10">
           {projectsPortfolio.map((project, index) => (
             <Project key={index} index={index} project={project} />
           ))}
