@@ -53,6 +53,6 @@ export const projectsPortfolio: Project[] = [
     technologies: ["React", "AntDesign"],
     image: Task_Manager,
     github: "",
-    liveView: "https://task-manager-paulofr17.vercel.app/"
+    liveView: "https://spickles.vercel.app/"
   },
 ];

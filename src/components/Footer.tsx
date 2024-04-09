@@ -1,7 +1,9 @@
+import { useSectionScroll } from "@hooks/useSectionScroll";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
 export function Footer() {
+  const { scrollToSection } = useSectionScroll();
   return (
     <footer className="bg-zinc-800 text-white">
       <div className="mx-auto max-w-[800px] py-4 sm:py-6">
@@ -36,25 +38,29 @@ export function Footer() {
           <div>
             <h3 className="mb-2 text-base font-semibold sm:text-lg">Quick Links</h3>
             <ul className="space-y-1 font-rubik text-sm sm:text-base">
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white">
-                  About
-                </a>
+              <li
+                className="cursor-pointer text-gray-300 hover:text-white"
+                onClick={scrollToSection("about")}
+              >
+                About
               </li>
-              <li>
-                <a href="#experience" className="text-gray-300 hover:text-white">
-                  Experience
-                </a>
+              <li
+                className="cursor-pointer text-gray-300 hover:text-white"
+                onClick={scrollToSection("experience")}
+              >
+                Experience
               </li>
-              <li>
-                <a href="#projects" className="text-gray-300 hover:text-white">
-                  Projects
-                </a>
+              <li
+                className="cursor-pointer text-gray-300 hover:text-white"
+                onClick={scrollToSection("projects")}
+              >
+                Projects
               </li>
-              <li>
-                <a href="#contact" className="text-gray-300 hover:text-white">
-                  Contact
-                </a>
+              <li
+                className="cursor-pointer text-gray-300 hover:text-white"
+                onClick={scrollToSection("contact")}
+              >
+                Contact
               </li>
             </ul>
           </div>

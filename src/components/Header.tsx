@@ -1,29 +1,13 @@
+import { useSectionScroll } from "@hooks/useSectionScroll";
 import { Menu, X } from "lucide-react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export function Header() {
-  const [activeSection, setActiveSection] = useState(null);
-  const sections = useRef<HTMLElement[]>([]);
   const [sideBarOpen, setSideBarOpen] = useState(false);
-
-  const scrollToSection = useCallback(
-    (sectionName: string, fromSideBar?: boolean) => () => {
-      const section = sections.current.find((section) => section.id === sectionName);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-      if (fromSideBar) {
-        setSideBarOpen(false);
-      }
-    },
-    [],
-  );
+  const [activeSection, setActiveSection] = useState(null);
+  const { sections, scrollToSection } = useSectionScroll();
 
   useEffect(() => {
-    sections.current = Array.from(
-      document.querySelectorAll("#about, #experience, #projects, #contact"),
-    ) as HTMLElement[];
-
     const handleScroll = () => {
       let maxVisibleSection = null;
       let maxVisibleArea = 0;
@@ -41,10 +25,21 @@ export function Header() {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const handleSidebarLinkClick = useCallback(
+    (section: string) => () => {
+      setSideBarOpen(false);
+      scrollToSection(section)();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
+  );
 
   return (
     <header className="sticky top-0 z-10 flex h-24 w-full max-w-[1920px] items-center justify-between bg-white px-4 shadow-sm sm:px-20">
@@ -93,25 +88,25 @@ export function Header() {
         <ul className="space-y-4 px-4 pt-4 font-rubik">
           <li
             className={`cursor-pointer hover:text-red-500 ${activeSection === "about" && "text-red-500"}`}
-            onClick={scrollToSection("about", true)}
+            onClick={handleSidebarLinkClick("about")}
           >
             About
           </li>
           <li
             className={`cursor-pointer hover:text-red-500 ${activeSection === "experience" && "text-red-500"}`}
-            onClick={scrollToSection("experience", true)}
+            onClick={handleSidebarLinkClick("experience")}
           >
             Experience
           </li>
           <li
             className={`cursor-pointer hover:text-red-500 ${activeSection === "projects" && "text-red-500"}`}
-            onClick={scrollToSection("projects", true)}
+            onClick={handleSidebarLinkClick("projects")}
           >
             Projects
           </li>
           <li
             className={`cursor-pointer hover:text-red-500 ${activeSection === "contact" && "text-red-500"}`}
-            onClick={scrollToSection("contact", true)}
+            onClick={handleSidebarLinkClick("contact")}
           >
             Contact
           </li>
