@@ -20,7 +20,7 @@ export const projectsPortfolio: Project[] = [
     technologies: ["Next", "React", "Tailwind", "Prisma", "MongoDB"],
     image: Task_Manager,
     github: "https://github.com/paulofr17/task-manager/",
-    liveView: "https://task-manager-paulofr17.vercel.app/"
+    liveView: "https://task--manager.vercel.app/"
   },
   {
     name: "Sneakers Store",
