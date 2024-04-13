@@ -33,13 +33,13 @@ export function Project({ project, index }: { project: Project; index: number })
       transition={{ duration: 0.7 }}
       className={`mt-6 flex flex-col-reverse gap-6 md:mt-8 ${index % 2 ? "md:flex-row-reverse" : "md:flex-row"}`}
     >
-      <div className="flex-1">
+      <div className="flex-1 my-auto">
         <img src={project.image} className="w-full rounded-lg" />
       </div>
-      <div className="mx-auto flex w-full max-w-96 flex-col gap-3 text-pretty text-center md:justify-evenly md:gap-4">
+      <div className="mx-auto flex w-full max-w-md flex-col gap-3 text-pretty text-center md:max-w-sm md:justify-evenly md:gap-4">
         <h3 className="text-xl font-semibold">{project.name}</h3>
         <p className="pb-1 font-rubik text-sm text-gray-700">{project.description}</p>
-        <div className="flex justify-center gap-[10px] text-sm font-semibold min-[500px]:gap-4">
+        <div className="flex justify-center gap-2 text-sm font-semibold min-[500px]:gap-4">
           {project.technologies.map((tech) => (
             <span key={tech}>{tech}</span>
           ))}

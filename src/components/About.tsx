@@ -1,13 +1,14 @@
 import { CursorBlinker } from "./CursorBlinker";
 import { TextSwitchingAnimation } from "./TextSwitchingAnimation";
+import About_Photo from "@assets/about_photo.png";
 
 export function About() {
   return (
     <div className="mx-auto flex w-full max-w-[900px] flex-col gap-6">
-      <div className="flex flex-col justify-between gap-4 md:flex-row-reverse">
+      <div className="flex flex-col justify-between gap-4 sm:flex-row-reverse">
         <img
-          src="https://via.assets.so/img.jpg?w=250&h=250&tc=white&bg=#cecece"
-          className="size-[250px] text-center"
+          src={About_Photo}
+          className="rounded-full w-72 mx-auto sm:size-52 md:size-56 lg:size-64 my-auto"
         />
         <div className="flex flex-col gap-2">
           <h1 className="text-4xl font-bold">Paulo Ribeiro</h1>
