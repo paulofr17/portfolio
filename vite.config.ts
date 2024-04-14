@@ -8,14 +8,14 @@ export default defineConfig({
   server: {
     port: 3000,
     watch: {
-      usePolling: true
-    }
+      usePolling: true,
+    },
   },
   resolve: {
     alias: [
       {
-        find: "@",
-        replacement: path.resolve(__dirname, "src"),
+        find: '@',
+        replacement: path.resolve(__dirname, 'src'),
       },
       {
         find: '@pages',
@@ -37,6 +37,6 @@ export default defineConfig({
         find: '@models',
         replacement: path.resolve(__dirname, 'src/models'),
       },
-    ]
-  }
+    ],
+  },
 })

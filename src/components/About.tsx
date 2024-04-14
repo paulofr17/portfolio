@@ -1,35 +1,35 @@
-import { CursorBlinker } from "./CursorBlinker";
-import { TextSwitchingAnimation } from "./TextSwitchingAnimation";
-import About_Photo from "@assets/about_photo.png";
+import AboutPhoto from '@assets/about_photo.png'
+import { CursorBlinker } from './CursorBlinker'
+import { TextSwitchingAnimation } from './TextSwitchingAnimation'
 
 export function About() {
   return (
     <div className="mx-auto flex w-full max-w-[900px] flex-col gap-6">
       <div className="flex flex-col justify-between gap-4 sm:flex-row-reverse">
         <img
-          src={About_Photo}
-          className="rounded-full w-72 mx-auto sm:size-52 md:size-56 lg:size-64 my-auto"
+          alt="Paulo Ribeiro"
+          src={AboutPhoto}
+          className="mx-auto my-auto w-72 rounded-full sm:size-52 md:size-56 lg:size-64"
         />
         <div className="flex flex-col gap-2">
           <h1 className="text-4xl font-bold">Paulo Ribeiro</h1>
           <h2 className="text-lg font-semibold text-red-500">
             <TextSwitchingAnimation
-              texts={["Full Stack Developer", "Salesforce Developer"]}
+              texts={['Full Stack Developer', 'Salesforce Developer']}
               delay={1}
             />
             <CursorBlinker />
-            {/* Full Stack Developer */}
           </h2>
           <p className="font-rubik text-sm leading-6 text-gray-700">
-            Hi, I'm a Full Stack Developer based in Portugal. Currently working in the Salesforce
-            ecosystem but always looking for new challenges.
+            Hi, I&apos;m a Full Stack Developer based in Portugal. Currently working in the
+            Salesforce ecosystem but always looking for new challenges.
             <br /> I am enthusiastic about continuously learning and evolving, seeking opportunities
             to contribute with my skills and expertise toward impactful projects that push the
             boundaries of innovation.
           </p>
           <a
             className="mt-1 w-fit rounded-lg bg-red-500 p-3 text-left font-rubik text-sm font-medium text-white transition hover:bg-red-500/70"
-            href={"/CV.pdf"}
+            href={'/CV.pdf'}
             download={true}
           >
             Download CV
@@ -40,7 +40,7 @@ export function About() {
         <h1 className="text-4xl font-bold">Education</h1>
         <div className="flex flex-col gap-2">
           <h2 className="text-lg font-semibold text-red-500">
-            Bachelor's and Master's Degree in Computer Science
+            Bachelor&apos;s and Master&apos;s Degree in Computer Science
           </h2>
           <p className="font-rubik text-sm leading-6 text-gray-700">
             I graduated in Computer Science from the University of Minho. During my academic
@@ -86,5 +86,5 @@ export function About() {
         </div>
       </div>
     </div>
-  );
+  )
 }

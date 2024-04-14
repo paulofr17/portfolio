@@ -1,9 +1,9 @@
-import { useSectionScroll } from "@hooks/useSectionScroll";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdOutlineEmail } from "react-icons/md";
+import { useSectionScroll } from '@hooks/useSectionScroll'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { MdOutlineEmail } from 'react-icons/md'
 
 export function Footer() {
-  const { scrollToSection } = useSectionScroll();
+  const { scrollToSection } = useSectionScroll()
   return (
     <footer className="bg-zinc-800 text-white">
       <div className="mx-auto max-w-[800px] py-4 sm:py-6">
@@ -19,6 +19,7 @@ export function Footer() {
                   href="https://linkedin.com/in/paulo-ribeiro17/"
                   target="_blank"
                   className="text-white hover:text-gray-300"
+                  rel="noreferrer"
                 >
                   <FaLinkedin size={22} />
                 </a>
@@ -26,6 +27,7 @@ export function Footer() {
                   href="https://github.com/paulofr17/"
                   target="_blank"
                   className="text-white hover:text-gray-300"
+                  rel="noreferrer"
                 >
                   <FaGithub size={22} />
                 </a>
@@ -40,25 +42,25 @@ export function Footer() {
             <ul className="space-y-1 font-rubik text-sm sm:text-base">
               <li
                 className="cursor-pointer text-gray-300 hover:text-white"
-                onClick={scrollToSection("about")}
+                onClick={scrollToSection('about')}
               >
                 About
               </li>
               <li
                 className="cursor-pointer text-gray-300 hover:text-white"
-                onClick={scrollToSection("experience")}
+                onClick={scrollToSection('experience')}
               >
                 Experience
               </li>
               <li
                 className="cursor-pointer text-gray-300 hover:text-white"
-                onClick={scrollToSection("projects")}
+                onClick={scrollToSection('projects')}
               >
                 Projects
               </li>
               <li
                 className="cursor-pointer text-gray-300 hover:text-white"
-                onClick={scrollToSection("contact")}
+                onClick={scrollToSection('contact')}
               >
                 Contact
               </li>
@@ -67,5 +69,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

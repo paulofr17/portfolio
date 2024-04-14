@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdOutlineEmail } from "react-icons/md";
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { MdOutlineEmail } from 'react-icons/md'
 
 export function Contact() {
   return (
@@ -41,5 +41,5 @@ export function Contact() {
         </a>
       </div>
     </div>
-  );
+  )
 }

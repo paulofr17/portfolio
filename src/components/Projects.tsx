@@ -1,5 +1,5 @@
-import { Project } from "@components/Project";
-import { projectsPortfolio } from "@models/types";
+import { Project } from '@components/Project'
+import { projectsPortfolio } from '@models/types'
 
 export function Projects() {
   return (
@@ -16,5 +16,5 @@ export function Projects() {
         </div>
       </div>
     </>
-  );
+  )
 }

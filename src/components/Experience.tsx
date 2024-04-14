@@ -3,7 +3,7 @@ export function Experience() {
     <div className="mx-auto flex w-full max-w-[900px] flex-col gap-2">
       <h1 className="text-center text-4xl font-bold">Experience</h1>
       <h2 className="text-center text-lg font-semibold text-red-500">
-        Here's a summary of my professional experience
+        Here&apos;s a summary of my professional experience
       </h2>
       <div className="mt-4">
         <h3 className="text-xl font-semibold">Salesforce Developer</h3>
@@ -38,5 +38,5 @@ export function Experience() {
         </ul>
       </div>
     </div>
-  );
+  )
 }
