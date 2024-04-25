@@ -21,8 +21,8 @@ export function About() {
             <CursorBlinker />
           </h2>
           <p className="font-rubik text-sm leading-6 text-gray-700">
-            Hi, I&apos;m a Full Stack Developer based in Portugal. Currently working in the
-            Salesforce ecosystem but always looking for new challenges.
+            Hi, I&apos;m a Software Developer based in Portugal. Currently working in the Salesforce
+            ecosystem but always looking for new challenges.
             <br /> I am enthusiastic about continuously learning and evolving, seeking opportunities
             to contribute with my skills and expertise toward impactful projects that push the
             boundaries of innovation.
