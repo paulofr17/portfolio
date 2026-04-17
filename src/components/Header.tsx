@@ -43,7 +43,8 @@ export function Header() {
   )
 
   return (
-    <header className="sticky top-0 z-10 flex h-24 w-full max-w-[1920px] items-center justify-between bg-white px-4 shadow-sm sm:px-20">
+    <header className="sticky top-0 z-10 flex h-24 w-full bg-white px-4 shadow-sm">
+      <div className='flex w-full max-w-[900px] mx-auto items-center justify-between'>
       <h1 className="text-lg font-bold">Paulo Ribeiro</h1>
       <ul className="hidden gap-4 text-sm font-semibold sm:flex sm:text-base">
         <li
@@ -121,6 +122,7 @@ export function Header() {
             Contact
           </li>
         </ul>
+      </div>
       </div>
     </header>
   )

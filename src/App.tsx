@@ -8,7 +8,7 @@ import { Footer } from '@components/Footer'
 
 function App() {
   return (
-    <div className="mx-auto w-full max-w-[1920px]">
+    <div className="mx-auto w-full">
       <Header />
       <section id="about" className="bg-zinc-50 px-4 py-12">
         <About />
