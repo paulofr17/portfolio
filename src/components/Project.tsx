@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import type { Project } from 'models/types'
+import type { Project } from '@models/types'
 import { useEffect, useRef, useState } from 'react'
 import { AiFillGithub } from 'react-icons/ai'
 import { FaExternalLinkAlt } from 'react-icons/fa'
