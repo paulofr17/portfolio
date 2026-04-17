@@ -21,11 +21,12 @@ export function About() {
             <CursorBlinker />
           </h2>
           <p className="font-rubik text-sm leading-6 text-gray-700">
-            Hi, I&apos;m a Software Developer based in Portugal. Currently working in the Salesforce
-            ecosystem but always looking for new challenges.
-            <br /> I am enthusiastic about continuously learning and evolving, seeking opportunities
-            to contribute with my skills and expertise toward impactful projects that push the
-            boundaries of innovation.
+            Hi, I&apos;m a Software Developer based in Portugal. Currently
+            working in the Salesforce ecosystem but always looking for new
+            challenges.
+            <br /> I am enthusiastic about continuously learning and evolving,
+            seeking opportunities to contribute with my skills and expertise
+            toward impactful projects that push the boundaries of innovation.
           </p>
           <a
             className="mt-1 w-fit rounded-lg bg-red-500 p-3 text-left font-rubik text-sm font-medium text-white transition hover:bg-red-500/70"
@@ -43,10 +44,10 @@ export function About() {
             Bachelor&apos;s and Master&apos;s Degree in Computer Science
           </h2>
           <p className="font-rubik text-sm leading-6 text-gray-700">
-            I graduated in Computer Science from the University of Minho. During my academic
-            journey, I developed a solid foundation in computer science principles, including
-            programming languages, algorithms, data structures, software engineering, and computer
-            architecture.
+            I graduated in Computer Science from the University of Minho. During
+            my academic journey, I developed a solid foundation in computer
+            science principles, including programming languages, algorithms,
+            data structures, software engineering, and computer architecture.
           </p>
         </div>
       </div>

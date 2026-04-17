@@ -15,7 +15,9 @@ export function Contact() {
         >
           <MdOutlineEmail size={52} className="mb-4 text-red-600" />
           <p className="mb-2 font-semibold">Email</p>
-          <p className="font-rubik text-sm text-gray-700 sm:text-base">paulofr17@gmail.com</p>
+          <p className="font-rubik text-sm text-gray-700 sm:text-base">
+            paulofr17@gmail.com
+          </p>
         </a>
         <a
           href="https://linkedin.com/in/paulo-ribeiro17/"
@@ -37,7 +39,9 @@ export function Contact() {
         >
           <FaGithub size={52} className="mb-4 text-black" />
           <p className="mb-2 font-semibold">GitHub</p>
-          <p className="font-rubik text-sm text-gray-700 sm:text-base">github.com/paulofr17</p>
+          <p className="font-rubik text-sm text-gray-700 sm:text-base">
+            github.com/paulofr17
+          </p>
         </a>
       </div>
     </div>

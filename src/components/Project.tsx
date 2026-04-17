@@ -4,7 +4,13 @@ import { useEffect, useRef, useState } from 'react'
 import { AiFillGithub } from 'react-icons/ai'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 
-export function Project({ project, index }: { project: Project; index: number }) {
+export function Project({
+  project,
+  index,
+}: {
+  project: Project
+  index: number
+}) {
   const ref = useRef<HTMLDivElement>(null)
   const [hasScrolled, setHasScrolled] = useState(false)
 
@@ -34,11 +40,17 @@ export function Project({ project, index }: { project: Project; index: number })
       className={`mt-6 flex flex-col-reverse gap-6 md:mt-8 ${index % 2 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
     >
       <div className="my-auto flex-1">
-        <img alt={project.name} src={project.image} className="w-full rounded-lg" />
+        <img
+          alt={project.name}
+          src={project.image}
+          className="w-full rounded-lg"
+        />
       </div>
       <div className="mx-auto flex w-full max-w-md flex-col gap-3 text-pretty text-center md:max-w-sm md:justify-evenly md:gap-4">
         <h3 className="text-xl font-semibold">{project.name}</h3>
-        <p className="pb-1 font-rubik text-sm text-gray-700">{project.description}</p>
+        <p className="pb-1 font-rubik text-sm text-gray-700">
+          {project.description}
+        </p>
         <div className="flex justify-center gap-2 text-sm font-semibold min-[500px]:gap-4">
           {project.technologies.map((tech) => (
             <span key={tech}>{tech}</span>

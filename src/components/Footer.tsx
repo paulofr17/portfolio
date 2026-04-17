@@ -12,7 +12,10 @@ export function Footer() {
             <div>
               <h3 className="text-base font-semibold sm:text-lg">Contact Me</h3>
               <nav className="mt-2 flex gap-3">
-                <a href="mailto:paulofr17@gmail.com" className="text-white hover:text-gray-300">
+                <a
+                  href="mailto:paulofr17@gmail.com"
+                  className="text-white hover:text-gray-300"
+                >
                   <MdOutlineEmail size={24} />
                 </a>
                 <a
@@ -38,7 +41,9 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="mb-2 text-base font-semibold sm:text-lg">Quick Links</h3>
+            <h3 className="mb-2 text-base font-semibold sm:text-lg">
+              Quick Links
+            </h3>
             <ul className="space-y-1 font-rubik text-sm sm:text-base">
               <li
                 className="cursor-pointer text-gray-300 hover:text-white"

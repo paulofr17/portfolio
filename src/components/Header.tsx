@@ -14,7 +14,8 @@ export function Header() {
 
       sections.current.forEach((section) => {
         const { top, bottom } = section.getBoundingClientRect()
-        const visibleArea = Math.min(window.innerHeight, bottom) - Math.max(0, top)
+        const visibleArea =
+          Math.min(window.innerHeight, bottom) - Math.max(0, top)
         if (visibleArea > maxVisibleArea) {
           maxVisibleArea = visibleArea
           maxVisibleSection = section.id
@@ -70,18 +71,27 @@ export function Header() {
           Contact
         </li>
       </ul>
-      <button onClick={() => setSideBarOpen((prev) => !prev)} className="block sm:hidden">
+      <button
+        onClick={() => setSideBarOpen((prev) => !prev)}
+        className="block sm:hidden"
+      >
         <Menu className="h-6 w-6" />
       </button>
       {sideBarOpen && (
-        <div className="fixed inset-0 z-10 bg-black/50" onClick={() => setSideBarOpen(false)}></div>
+        <div
+          className="fixed inset-0 z-10 bg-black/50"
+          onClick={() => setSideBarOpen(false)}
+        ></div>
       )}
       <div
         className={`fixed inset-y-0 left-0 z-20 w-64 transform bg-white transition-transform duration-300 ${sideBarOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
         <div className="flex items-center justify-between px-4 py-3">
           <h1 className="text-lg font-bold">Menu</h1>
-          <button onClick={() => setSideBarOpen(false)} className="hover:opacity-50">
+          <button
+            onClick={() => setSideBarOpen(false)}
+            className="hover:opacity-50"
+          >
             <X className="h-6 w-6" />
           </button>
         </div>

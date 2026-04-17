@@ -1,12 +1,20 @@
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
 import { useEffect } from 'react'
 
-export function TextSwitchingAnimation({ texts, delay }: { texts: string[]; delay: number }) {
+export function TextSwitchingAnimation({
+  texts,
+  delay,
+}: {
+  texts: string[]
+  delay: number
+}) {
   const textIndex = useMotionValue(0)
   const baseText = useTransform(textIndex, (latest) => texts[latest] || '')
   const count = useMotionValue(0)
   const rounded = useTransform(count, (latest) => Math.round(latest))
-  const displayText = useTransform(rounded, (latest) => baseText.get().slice(0, latest))
+  const displayText = useTransform(rounded, (latest) =>
+    baseText.get().slice(0, latest),
+  )
   const updatedThisRound = useMotionValue(true)
 
   useEffect(() => {
